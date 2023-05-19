@@ -11,8 +11,14 @@ import { fetchOneUserTC } from "../Redux/ActionCreators/userAC";
 import { BASE_URL } from "../utils/baseURL_const";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import { EDIT_PROFILE_ROUTE } from "../utils/routes_consts";
-import { clearQuestionsAC, fetchQuestionsTC } from "../Redux/ActionCreators/questionAC";
-import { fetchAnswersCountTC, fetchAnswersTC } from "../Redux/ActionCreators/answerAC";
+import {
+  clearQuestionsAC,
+  fetchQuestionsTC,
+} from "../Redux/ActionCreators/questionAC";
+import {
+  fetchAnswersCountTC,
+  fetchAnswersTC,
+} from "../Redux/ActionCreators/answerAC";
 import UserQuestionList from "../components/UsersQuestions/UserQuestionList";
 import { useRef } from "react";
 import AnswerList from "../components/AnswerList/AnswerList";
@@ -40,13 +46,10 @@ const Profile = (props) => {
     store.dispatch(fetchAnswersCountTC(null, +id));
   };
 
-
   useEffect(() => {
     fetchUser();
     fetchProfileAnswers();
   }, [id]);
-
-
 
   store.subscribe(() => {
     setCurUser(store.getState().userPage.currentUser);
@@ -94,7 +97,16 @@ const Profile = (props) => {
                 ) : (
                   <></>
                 )}
+                <Row>
+                <Col>
                 <h2>{curUser?.fullname}</h2>
+                </Col>
+                <Col>
+                 {curUser?.role !== "USER" ? <p>{curUser?.role}</p> : <></>}
+                </Col>
+               
+                </Row>
+                
                 <p>{curUser?.status}</p>
               </div>
             </Container>
@@ -120,27 +132,28 @@ const Profile = (props) => {
             {!isAnswers ? (
               <>
                 <Col xs="2">
-                  <span
-                    className={s.active_span}
-                  >
-                    Вопросы
-                  </span>
+                  <span className={s.active_span}>Вопросы</span>
                 </Col>
                 <Col xs="2">
-                  <span id={s.tab} onClick={() => (setIsAnswers(true), store.dispatch(clearQuestionsAC()))}>Ответы</span>
+                  <span
+                    id={s.tab}
+                    onClick={() => (
+                      setIsAnswers(true), store.dispatch(clearQuestionsAC())
+                    )}
+                  >
+                    Ответы
+                  </span>
                 </Col>
               </>
             ) : (
               <>
                 <Col xs="2">
-                  <span    
-                  onClick={() => setIsAnswers(false)}                        
-                  >
-                    Вопросы
-                  </span>
+                  <span onClick={() => setIsAnswers(false)}>Вопросы</span>
                 </Col>
                 <Col xs="2">
-                  <span id={s.tab} className={s.active_span}>Ответы</span>
+                  <span id={s.tab} className={s.active_span}>
+                    Ответы
+                  </span>
                 </Col>
               </>
             )}

@@ -62,7 +62,6 @@ const UsersModal = ({ show, onHide }) => {
               <th>Имя</th>
               <th>Почта</th>            
               <th>Роль</th>
-              <th>Бан</th>
             </tr>
           </thead>
            {allUsers.map((user) => (
@@ -72,10 +71,6 @@ const UsersModal = ({ show, onHide }) => {
                 <td><Link style={{color:"black"}} to={PROFILE_ROUTE + `/${user.id}`}>{user.fullname}</Link></td>
                 <td>{user.email}</td>
                 <td>{user.role}</td>
-                <td
-                  className="bi bi-trash3-fill m-auto"
-                
-                ></td>
               </tr>
             </tbody>
           ))} 

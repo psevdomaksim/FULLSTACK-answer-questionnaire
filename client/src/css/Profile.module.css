@@ -21,6 +21,7 @@
 
 .profile p {
     color: #747474;
+    line-height: 45px;
 }
 
 .profile_left_col {
@@ -156,6 +157,7 @@
 
 .profile p {
     color: #747474;
+    line-height: 0;
 }
 
 .profile_left_col {

@@ -22,7 +22,7 @@ const UserQuestion = (props) => {
       </Row>
 
       <Row className={s.question_container}>
-        <Col xs={2}>
+        <Col xs={2} style={{minWidth:"50px"}}>
           <Link to={PROFILE_ROUTE + `/${props.question?.user?.id}`}>
             <Image
               src={BASE_URL + `/${props.question?.user?.avatarImage}`}
