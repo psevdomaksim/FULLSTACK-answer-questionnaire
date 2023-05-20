@@ -16,7 +16,7 @@ const UserQuestion = (props) => {
             <h4>{props.question?.title}</h4>
           </Link>
 
-          <GoReport xs={{ offset: 10 }} md={{ span: 2, offset: 11 }} onClick={()=>props.addReport(props.question?.id)} style={{ color: "white", cursor:"pointer" }} size={24} />
+          <GoReport xs={{ offset: 10 }} md={{ span: 2, offset: 11 }} className="mt-2" onClick={()=>props.addReport(props.question?.id)} style={{ color: "white", cursor:"pointer" }} size={24} />
         </Col>
       </Row>
        
@@ -38,7 +38,10 @@ const UserQuestion = (props) => {
           <span className={s.signature}>{props.question?.user?.fullname}</span>
           <span className={s.signature}>{props.question?.createdAt}</span>
           <span className={s.signature}>{props.question?.category?.name}</span>
-        <span style={{ color: "white"}}>{props.question?.answersCount} <FaCommentDots  style={{ color: "white" }} size={24} /></span>
+        <span style={{ color: "white"}}>{props.question?.answersCount} 
+        
+        <Link to={QUESTION_PAGE_ROUTE + `/${props.question?.id}`}> <FaCommentDots  style={{ color: "white" }} size={24} /></Link>
+        </span>
       </Stack>
     </Container>
   );

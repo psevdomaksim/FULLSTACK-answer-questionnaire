@@ -80,7 +80,7 @@ const Profile = (props) => {
                 <Col className={s.profile_left_col}>
                   <Image
                     src={BASE_URL + `/${curUser?.avatarImage}`}
-                    style={{ width: "150px", height: "150px" }}
+                    style={{ width: "120px", height: "120px" }}
                     roundedCircle
                   />
                   <p id={s.member_text}>
@@ -92,7 +92,7 @@ const Profile = (props) => {
               <div className={s.profile}>
                 {store.getState().authPage.currentLogin?.id === +id ? (
                   <Link to={EDIT_PROFILE_ROUTE + `/${id}`}>
-                    <Button variant="secondary">Редактировать профиль</Button>
+                    <Button style={{width:"70px", height:"30px"}} variant="secondary">Редактировать</Button>
                   </Link>
                 ) : (
                   <></>

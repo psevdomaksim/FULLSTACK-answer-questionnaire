@@ -22,11 +22,9 @@ const questionReducer = (state = initialState, action) => {
     
     case FETCH_QUESTIONS: {
 
-      const resultQuestions = [...state.questions, ...action.questions.rows];
-
       state = {
         ...state,
-        questions: resultQuestions,
+        questions: [...state.questions, ...action.questions.rows],
         count: action.questions.count,
       };
       return state;
