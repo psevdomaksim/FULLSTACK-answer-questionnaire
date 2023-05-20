@@ -92,7 +92,7 @@ const Profile = (props) => {
               <div className={s.profile}>
                 {store.getState().authPage.currentLogin?.id === +id ? (
                   <Link to={EDIT_PROFILE_ROUTE + `/${id}`}>
-                    <Button style={{width:"70px", height:"30px"}} variant="secondary">Редактировать</Button>
+                    <Button style={{width:"9em", height:"2.5em"}} variant="secondary">Редактировать</Button>
                   </Link>
                 ) : (
                   <></>

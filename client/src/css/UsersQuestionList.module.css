@@ -12,7 +12,7 @@
 
 @media only screen and (max-width: 768px) {
     .list_wrapper {
-        width: 85%;
+        width: 98%;
         margin: 1em auto ;
         border: #FFE400 2px solid;
         border-radius: 0.8em;

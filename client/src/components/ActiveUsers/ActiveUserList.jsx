@@ -27,8 +27,7 @@ const ActiveUsersList = (props) => {
   return (
     <div className={s.wrapper}>
       <div className={s.container}>
-        <span>Самые активые</span>
-        <span>Пользователи</span>
+        <h5>Самые активные пользователи</h5>
       </div>
       {activeUsers?.map((user) => (
         <ActiveUser key={user.id} user={user} />
