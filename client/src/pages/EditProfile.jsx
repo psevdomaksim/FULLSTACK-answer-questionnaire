@@ -92,26 +92,26 @@ const Edit = (props) => {
         </Col>
       </Row>
       <Row>
-        <Col xs={3} className="d-flex align-items-center">
+        <Col xs={10} md={5} className="d-flex align-items-center">
           <Form.Control type="file" onChange={imgHandler} />
         </Col>
       </Row>
       <Row className={s.name_row}>
-        <Col md={{ span: 2, offset: 2 }}>
+        <Col xs={6}>
           <Image
             src={
               BASE_URL +
               `/${store.getState().authPage.currentLogin?.avatarImage}`
             }
-            style={{ width: "150px", height: "150px" }}
+            style={{ width: "140px", height: "140px" }}
             roundedCircle
           />
         </Col>
-        <Col md={{ span: 2, offset: 2 }}>
+        <Col xs={6}>
           {img ? (
             <Image
               src={img}
-              style={{ width: "150px", height: "150px" }}
+              style={{ width: "140px", height: "140px" }}
               roundedCircle
             />
           ) : (
@@ -126,7 +126,7 @@ const Edit = (props) => {
         <b style={{ color: "lime" }}>{msg}</b>
       </Row>
       <Row>
-        <Col>
+        <Col xs={6} md={6}>
           {isDisabledPutBtn ? (
             <Button disabled id={s.save_button}>
               Сохранить
@@ -137,7 +137,7 @@ const Edit = (props) => {
             </Button>
           )}
         </Col>
-        <Col>
+        <Col  xs={6} md={6}>
           <Link to={PROFILE_ROUTE + `/${curLogin?.id}`}>
             <Button  id={s.back_button}>Вернуться</Button>
           </Link>

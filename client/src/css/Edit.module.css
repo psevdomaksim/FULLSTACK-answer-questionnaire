@@ -1,6 +1,5 @@
 .edit_wrapper {
-    width: 100%;
-    height: 709px;
+    width: 50%;
     border: #14A76C 2px solid;
     border-radius: 15px;
     margin: 32px auto 172px;
@@ -31,7 +30,7 @@
 
 
 #save_button {
-    width: 162px;
+    width: 100%;
     border: #14A76C 2px solid;
     background: #4B4B4B;
     color: #fff;
@@ -39,8 +38,21 @@
 }
 
 #back_button {
-    width: 162px;
+    width: 100%;
     background: #4B4B4B;
     color: #fff;
     border-radius: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .edit_wrapper {
+        width: 100%;
+        border: #14A76C 2px solid;
+        border-radius: 15px;
+        margin: 32px auto 172px;
+        color: #fff;
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 20px;
+    }
 }
