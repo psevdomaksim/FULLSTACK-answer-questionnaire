@@ -68,6 +68,7 @@ const NewQuestion = (props) => {
             className={s.select_list}
             id="category"
             onChange={onChange}
+            value={category}
           >
             {categories.map((category) => (
               <option key={category.id} value={category.id}>

@@ -1,16 +1,13 @@
 @media only screen and (min-width: 1024px) {
 .wrapper {
     border-bottom: #808080 1px solid;
+    margin: 10px;
 }
 
 .wrapper h4 {
     color: #14A76C;
 }
 
-.question_container {
-    display: flex;
-    margin: 1em auto;
-}
 p{
     color: #FFFFFF;
 }

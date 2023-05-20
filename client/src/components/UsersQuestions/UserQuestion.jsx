@@ -1,6 +1,5 @@
 import React from "react";
 import s from "../../css/UsersQuestion.module.css";
-import { FcLike } from "react-icons/fc";
 import { GoReport } from "react-icons/go";
 import { FaCommentDots } from "react-icons/fa";
 import { Col, Row, Stack, Image, Container } from "react-bootstrap";
@@ -17,26 +16,23 @@ const UserQuestion = (props) => {
             <h4>{props.question?.title}</h4>
           </Link>
 
-          <GoReport onClick={()=>props.addReport(props.question?.id)} style={{ color: "white", cursor:"pointer" }} size={24} />
+          <GoReport xs={{ offset: 10 }} md={{ span: 2, offset: 11 }} onClick={()=>props.addReport(props.question?.id)} style={{ color: "white", cursor:"pointer" }} size={24} />
         </Col>
       </Row>
-
-      <Row className={s.question_container}>
-        <Col xs={2} style={{minWidth:"50px"}}>
+       
           <Link to={PROFILE_ROUTE + `/${props.question?.user?.id}`}>
             <Image
               src={BASE_URL + `/${props.question?.user?.avatarImage}`}
-              style={{ width: "50px", height: "50px" }}
+              className="me-2"
+              style={{ width: "50px", height: "50px", float:"left" }}
               roundedCircle
             />
           </Link>
-        </Col>
-
-        <Col xs={10}>
+    
           {" "}
-          <p>{props.question?.body}</p>{" "}
-        </Col>
-      </Row>
+          <p style={{minHeight:"50px"}}> {props.question?.body}</p>{" "}
+       
+     
 
       <Stack direction="horizontal" gap={4} className={s.signature_block}>
           <span className={s.signature}>{props.question?.user?.fullname}</span>

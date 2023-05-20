@@ -1,5 +1,5 @@
 .edit_wrapper {
-    width: 641px;
+    width: 100%;
     height: 709px;
     border: #14A76C 2px solid;
     border-radius: 15px;
@@ -14,15 +14,10 @@
     margin: 50px 0px;
 }
 
-#status {
-    width: 378px;
-    height: 111px;
-}
-
 .name_row input {
     border-radius: 10px;
     background: #4B4B4B;
-    width: 378px;
+    width: 100%;
     color: #fff;
 }
 
@@ -34,18 +29,6 @@
     letter-spacing: 1px;
 }
 
-#large_photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-#small_photo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-top: 100px;
-}
 
 #save_button {
     width: 162px;

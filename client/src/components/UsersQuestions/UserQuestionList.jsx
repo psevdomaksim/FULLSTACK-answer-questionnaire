@@ -14,7 +14,7 @@ const UserQuestionList = (props) => {
   const [userQuestions, setUserQuestions] = useState(null);
 
   const [limit, setLimit] = useState(store.getState().questionPage?.limit);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(store.getState().questionPage?.page);
   const [loadData, setLoadData] = useState(true);
 
   const observer = useRef(null);

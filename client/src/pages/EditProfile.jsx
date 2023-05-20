@@ -76,7 +76,7 @@ const Edit = (props) => {
         </Col>
       </Row>
       <Row className={s.name_row}>
-        <Col>
+        <Col style={{marginRight:"20px"}} xs={2}>
           <span>Имя</span>
         </Col>
         <Col>
@@ -84,8 +84,8 @@ const Edit = (props) => {
         </Col>
       </Row>
       <Row className={s.name_row}>
-        <Col>
-          <span>Статус</span>
+        <Col style={{marginRight:"20px"}} xs={2}>
+          <span >Статус</span>
         </Col>
         <Col>
           <Form.Control id="status" value={status} onChange={onChange} />
@@ -126,7 +126,7 @@ const Edit = (props) => {
         <b style={{ color: "lime" }}>{msg}</b>
       </Row>
       <Row>
-        <Col md={{ span: 2, offset: 2 }}>
+        <Col>
           {isDisabledPutBtn ? (
             <Button disabled id={s.save_button}>
               Сохранить
@@ -137,9 +137,9 @@ const Edit = (props) => {
             </Button>
           )}
         </Col>
-        <Col md={{ span: 2, offset: 2 }}>
+        <Col>
           <Link to={PROFILE_ROUTE + `/${curLogin?.id}`}>
-            <Button id={s.back_button}>Вернуться</Button>
+            <Button  id={s.back_button}>Вернуться</Button>
           </Link>
         </Col>
       </Row>
